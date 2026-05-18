@@ -1,0 +1,70 @@
+# =============================================
+# .gitignore - AI Vision API as a Service
+# =============================================
+
+# ---- Variables de entorno (NUNCA subir) ----
+.env
+.env.local
+.env.production
+.env.development
+.env.staging
+*.env
+
+# ---- Claves y certificados (NUNCA subir) ----
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.cer
+
+# ---- Node.js / Frontend ----
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+frontend/.next/
+.vercel/
+
+# ---- Python / Backend ----
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Docker ----
+*.tar
+
+# ---- IDEs y editores ----
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+Thumbs.db
+
+# ---- Logs ----
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- Modelos ML descargados (pesados) ----
+*.h5
+*.keras
+saved_model/
