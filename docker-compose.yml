@@ -2,9 +2,7 @@ version: "3.9"
 
 services:
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: ghcr.io/javiercancinounab/ai-vision-api-service/backend:latest
     container_name: ai_vision_backend
     ports:
       - "8000:8000"
