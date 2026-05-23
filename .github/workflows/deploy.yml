@@ -6,35 +6,8 @@ on:
 
 jobs:
   # ─────────────────────────────────────────
-  # 1. Backend → imagen Docker en ghcr.io
-  # ─────────────────────────────────────────
-  build-backend:
-    name: Build & Push Backend (Docker)
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
-    steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
-
-      - name: Login a GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build y push imagen backend
-        uses: docker/build-push-action@v5
-        with:
-          context: ./backend
-          push: true
-          tags: ghcr.io/${{ github.repository }}/backend:latest
-
-  # ─────────────────────────────────────────
-  # 2. Frontend → build + deploy a Vercel
+  # Frontend → build + deploy a Vercel
+  # Backend → Render auto-despliega al detectar push en main
   # ─────────────────────────────────────────
   deploy-frontend:
     name: Build & Deploy Frontend (Vercel)
