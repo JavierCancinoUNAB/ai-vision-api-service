@@ -93,7 +93,7 @@ Demostrar la implementación práctica de los tres modelos de servicio cloud:
 
 ```bash
 cd backend
-python -m venv venv
+python3 -m venv venv
 
 # macOS / Linux
 source venv/bin/activate

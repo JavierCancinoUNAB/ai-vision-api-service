@@ -68,3 +68,5 @@ yarn-error.log*
 *.h5
 *.keras
 saved_model/
+.vercel
+.env*
